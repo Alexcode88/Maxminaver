@@ -30,11 +30,19 @@ users = [
     }
   ]
   
-  function usersLanguages( fname , lname , languages ){
-    this.fname = fname;
-    this.lname = lname;
-    this.languages = languages;
+  //function iterador(aquiLista)
+
+  function usersLanguages( name , lastname , languages ){
+    this.name = name;
+    this.lastname = lastname;
+    this.lang = lang;
     this.printInfo = function(){
-        console.log( this.fname + this.lname + "knows" + this.languages );
+    return console.log( this.name + " " + this.lastname + " knows " + this.lang );
     }
+
 }
+let show = new usersLanguages(users[0].fname, users[0].lname, users[0].languages)
+console.log(show.printInfo()) 
+// return para definir el undefined 
+console.log("********************************************")
+console.log(users[2].fname);

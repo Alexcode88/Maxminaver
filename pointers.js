@@ -1,0 +1,24 @@
+var tigger = { character: "Tigger" }; // start with just the character attribute
+var pooh = { character: "Winnie the Pooh" };
+var piglet = { character: "Piglet"};
+var owl = { character: "Owl"};   
+var rabbit = { character: "Rabbit"};   
+var bees = { character: "Bees"};  
+var gopher = { character: "Gopher"};  
+var kanga = { character: "Kanga"};  
+var robin = { character: "Christopher Robin"};  
+var eeyore = { character: "Eeyore"};  
+var heffalumps = { character: "Heffalumps"};  
+     // create Piglet's home object with just the character attribute
+piglet.east = tigger.north;          // Piglet's east attribute is Tigger's north attribute, which is a memory address
+tigger.north.west = piglet;          // Follow Tigger's north attribute to a location in memory
+tigger.north.east= bees;                           // Assign that object's west attribute to piglet
+tigger.north = pooh; // add more attributes, where we are actually storing the memory location for the other object
+pooh.south = tigger;
+pooh.north= robin;
+piglet.north=owl;
+robin.east=rabbit;
+rabbit.east=gopher;
+robin.north=kanga;
+kanga.north=eeyore;
+eeyore.east=heffalumps; 
